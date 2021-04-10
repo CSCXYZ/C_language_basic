@@ -14,4 +14,4 @@ int main()
 	printf("%d", result);
 	return 0;
 
-}    //N!
+}    //n!
