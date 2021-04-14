@@ -112,3 +112,23 @@ int main()
 		printf("三次密码均错误，退出程序\n");
 	return 0;
 }   //Enter the password three times
+
+#include<stdio.h>
+int sum(int a)
+{
+	int c = 0;
+	static int b = 3;
+	c += 1;
+	b += 2;
+	return(a + b + c);
+}
+int main()
+{
+	int i;
+	int a = 2;
+	for (i = 0; i < 5; i++)
+	{
+		printf("%d,", sum(a));
+	}
+	return 0;
+}  // 8,10,12,14,16
