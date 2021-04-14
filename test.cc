@@ -87,3 +87,28 @@ int main()
 	printf("%s\n", arr2);
 	return 0;
 }  //The characters move from both ends and converge towards the middle
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	int i = 0;
+	char password[20] = { 0 };
+	for (i = 0; i < 3; i++)
+	{
+		printf("输入密码：>");
+		scanf("%s", password);
+		if (strcmp(password, "123456")==0)
+		{
+			printf("登录成功\n");
+			break;
+		}
+		else
+		{
+			printf("密码错误");
+		}
+	}
+	if (i == 3)
+		printf("三次密码均错误，退出程序\n");
+	return 0;
+}   //Enter the password three times
