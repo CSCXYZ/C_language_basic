@@ -223,3 +223,27 @@ int main()
 	printf("\ncount=%d\n", count);
 	return 0;
 } //1000年到2000年之间的闰年
+
+int main()
+{
+	int i;
+	int count=0;
+	for (i = 100; i <= 200; i++)
+	{
+		int j = 0;
+		for (j = 2; j < i; j++)
+		{
+			if (i % j == 0)
+			{
+				break;
+			}
+		}
+		if (j == i)
+		{
+			count++;
+			printf("%d\n", i);
+		}
+	} 
+	printf("\ncount=%d\n", count);
+	return 0;
+} //质数 素数 PrimeNumber(Trial Division)
