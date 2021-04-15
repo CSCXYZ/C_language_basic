@@ -171,3 +171,19 @@ int main()
 	}
 	return 0;
 } //0~100 3的倍数
+
+int main()
+{
+	int m = 0;
+	int n = 0;
+	int r = 0;
+	scanf("%d%d", &m, &n);
+	while (r=m % n)
+	{
+		m = n;
+		n = r;
+	}
+	printf("%d\n", n);
+	return 0;
+} //辗转相除法(欧几里得算法Euclidean algorithm)基于如下原理:
+ //两个整数的最大公约数等于其中较小的数和两数的相除余数的最大公约数
