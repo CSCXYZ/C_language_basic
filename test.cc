@@ -272,3 +272,19 @@ int main()
 	printf("\ncount=%d\n", count);
 	return 0;
 }//质数 素数 PrimeNumber(Trial Division),若为素数一定含可除数小于等于原数开平方，若为素数一定非偶数
+
+#include<stdio.h>
+int main()
+{
+	int i = 0;
+	int count = 0;
+	for (i = 1; i <= 100; i++)
+	{
+		if (i % 10 == 9)
+			count++;
+		if (i / 10 == 9)
+			count++;
+    }
+	printf("count=%d\n", count);
+	return 0;
+}//编写程序数一下1到100的所有整数中出现多少个数字9
