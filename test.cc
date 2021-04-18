@@ -319,3 +319,18 @@ int main()
 	printf("max=%d\n", max);
 	return 0;
 }//求10个整数中最大值
+
+int main()
+{
+	int i = 0;
+	for (i = 1; i <= 9; i++)
+	{
+		int j = 0;
+		for (j = 1; j <= i; j++)
+		{
+			printf("%d*%d=%-2d ", i, j, i * j);
+		}
+		printf("\n");
+	}
+	return 0;
+}//乘法口诀表打印（对齐）
