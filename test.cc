@@ -333,7 +333,7 @@ int main()
 		printf("\n");
 	}
 	return 0;
-}//乘法口诀表打印（对齐）
+}//乘法口诀表打印（对齐）"%2d右对齐，%-2d左对齐，2d打印两位"
 
 #include<stdio.h>
 #include<stdlib.h>
