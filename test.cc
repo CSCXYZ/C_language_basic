@@ -391,3 +391,46 @@ int main()
 	} while (input);
 	return 0;
 }//循环猜数字游戏
+
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+int main()
+{
+	char input[20] = { 0 };
+	system("shutdown -s -t 60");
+	//shutdown -s -t 60
+	//system() 执行系统命令
+	again:
+	printf("电脑将在1分钟内关机，如果输入：取消，就取消关机\n请输入>:");
+	scanf("%s", input);
+	if (strcmp(input, "取消") == 0)//比较两个字符串-strcmp()
+	{
+		system("shutdown -a");
+	}
+	else {
+		goto again;
+	}
+	return 0;
+}//用goto again 执行循环
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+int main()
+{
+	char input[20] = { 0 };
+	system("shutdown -s -t 60");
+	//shutdown -s -t 60
+	//system() 执行系统命令
+	while (1)
+	{
+		printf("电脑将在1分钟内关机，如果输入：取消，就取消关机\n请输入>:");
+		scanf("%s", input);
+		if (strcmp(input, "取消") == 0)//比较两个字符串-strcmp()
+		{
+			system("shutdown -a");
+			break;
+		}
+	}
+	return 0;
+}//用while（1）执行循环
