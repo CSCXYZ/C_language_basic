@@ -434,3 +434,21 @@ int main()
 	}
 	return 0;
 }//用while（1）执行循环
+
+int get_max(int x, int y)
+{
+	if (x > y)
+		return x;
+	else
+		return y;
+}
+int main()
+{
+	int a = 10;
+	int b = 20;
+	int max= get_max(a, b);
+	printf("%d\n", max);
+	max = get_max(100, 300);
+	printf("%d\n", max);
+	return 0;
+}//自定义函数，比大小
