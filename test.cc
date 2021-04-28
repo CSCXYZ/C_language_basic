@@ -471,3 +471,30 @@ Swap(&a, &b);
 printf("a=%d b=%d\n", a, b);
 	return 0;
 }//建立函数，交换数据 
+
+
+
+#include<stdio.h>
+#include<math.h>
+int is_prime(int n)//是素数返回1，不是素数返回0
+{
+	int i;
+	for (i = 2; i <= sqrt(n); i++)
+	{
+		if (n % i == 0)
+			return 0;
+	}
+	return 1;
+}
+int main()
+{
+	//打印100-200之间的素数
+	int i = 0;
+	for (i = 100; i <= 200; i++)
+	{
+		//判断i是否为素数
+		if (is_prime(i) == 1)
+			printf("%d\n", i);
+	}
+	return 0;
+}//判断素数的自定义函数，自除至平方根
