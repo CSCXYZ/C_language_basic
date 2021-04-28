@@ -452,3 +452,22 @@ int main()
 	printf("%d\n", max);
 	return 0;
 }//自定义函数，比大小
+
+void Swap(int* pa, int* pb)//形参实例化之后其实相当于实参的一份临时拷贝
+//void声明函数返回值为0（没有返回值）
+{
+	int tmp = 0;
+	tmp = *pa;
+	*pa = *pb;
+	*pb = tmp;
+}//交换相应地址里的内容
+int main()
+{
+int a = 10;
+int b = 20;
+
+printf("a=%d b=%d\n", a, b);
+Swap(&a, &b);
+printf("a=%d b=%d\n", a, b);
+	return 0;
+}//建立函数，交换数据 
