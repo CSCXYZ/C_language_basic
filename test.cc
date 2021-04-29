@@ -568,3 +568,18 @@ int main()
 	}
 	return 0;
 }
+
+void Add(int* p)//每调用一次这个函数，就会将num的值增加1
+{
+	(*p)++;//++的优先级更高，因此，*p需要先括号
+}
+int main()
+{
+	int num = 0;
+	for (int i = 0; num < 4; i++)
+	{
+		Add(&num);
+		printf("num=%d\n", num);
+	}
+	return 0;
+}
