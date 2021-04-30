@@ -13,8 +13,9 @@ int main()
 	}
 	printf("%d", result);
 	return 0;
-
 }    //n!
+
+
 
 int main()
 {
@@ -31,6 +32,8 @@ int main()
 	printf("sum=%d\n", sum);
 	return 0;
 }  //1！+2！+3！...n!
+
+
 
 int main()
 {
@@ -63,6 +66,8 @@ int main()
 	return 0;
 }  //find a number in the array(binary search)
 
+
+
 #include<stdio.h>
 #include<string.h>
 #include<windows.h>
@@ -87,6 +92,8 @@ int main()
 	printf("%s\n", arr2);
 	return 0;
 }  //The characters move from both ends and converge towards the middle
+
+
 
 #include<stdio.h>
 #include<string.h>
@@ -113,6 +120,8 @@ int main()
 	return 0;
 }   //Enter the password three times
 
+
+
 #include<stdio.h>
 int sum(int a)
 {
@@ -132,6 +141,8 @@ int main()
 	}
 	return 0;
 }  // 8,10,12,14,16
+
+
 
 int main()
 {
@@ -161,6 +172,8 @@ int main()
 	return 0;
 } // a b c依大到小排序
 
+
+
 int main()
 {
 	int i = 0;
@@ -171,6 +184,8 @@ int main()
 	}
 	return 0;
 } //0~100 3的倍数
+
+
 
 int main()
 {
@@ -187,6 +202,8 @@ int main()
 	return 0;
 } //辗转相除法(欧几里得算法Euclidean algorithm)基于如下原理:
  //两个整数的最大公约数等于其中较小的数和两数的相除余数的最大公约数
+
+
 
 int main()
 {
@@ -223,6 +240,8 @@ int main()
 	printf("\ncount=%d\n", count);
 	return 0;
 } //1000年到2000年之间的闰年
+
+
 
 int main()
 {
@@ -273,6 +292,8 @@ int main()
 	return 0;
 }//质数 素数 PrimeNumber(Trial Division),若为素数一定含可除数小于等于原数开平方，若为素数一定非偶数
 
+
+
 #include<stdio.h>
 int main()
 {
@@ -289,6 +310,8 @@ int main()
 	return 0;
 }//编写程序数一下1到100的所有整数中出现多少个数字9
 
+
+
 int main()
 {
 	int i = 0;
@@ -302,6 +325,8 @@ int main()
 	printf("%lf\n", sum);
 	return 0;
 }//1/1-1/2+1/3-1/4+1/5......+1/99-1/100
+
+
 
 int main()
 {
@@ -320,6 +345,8 @@ int main()
 	return 0;
 }//求10个整数中最大值
 
+
+
 int main()
 {
 	int i = 0;
@@ -334,6 +361,8 @@ int main()
 	}
 	return 0;
 }//乘法口诀表打印（对齐）"%2d右对齐，%-2d左对齐，2d打印两位"
+
+
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -392,6 +421,8 @@ int main()
 	return 0;
 }//循环猜数字游戏
 
+
+
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -434,6 +465,8 @@ int main()
 	}
 	return 0;
 }//用while（1）执行循环
+
+
 
 int get_max(int x, int y)
 {
@@ -569,6 +602,8 @@ int main()
 	return 0;
 }
 
+
+
 void Add(int* p)//每调用一次这个函数，就会将num的值增加1
 {
 	(*p)++;//++的优先级更高，因此，*p需要先括号
@@ -583,3 +618,31 @@ int main()
 	}
 	return 0;
 }
+
+
+
+#ifndef __ADD_H__
+#define __ADD_H__
+//函数的声明
+int Add(int x, int y);
+#endif//函数头文件的声明，防止过度引用（add.h）
+
+
+int Add(int x, int y)
+{
+	return x+y;
+}//函数文件（add.c）
+
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include"add.h"
+int main()
+{
+	int a = 10;
+	int b = 20;
+	int sum = Add(a, b);
+	printf("%d\n", sum);
+	return 0;
+}//引用自定义函数（test.c）
