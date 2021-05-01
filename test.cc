@@ -646,3 +646,20 @@ int main()
 	printf("%d\n", sum);
 	return 0;
 }//引用自定义函数（test.c）
+
+
+
+void print(int n)//接受一个整型值（无符号），按照顺序打印它的每一位。输入：1234，输出1 2 3 4。递归
+{
+	if (n > 9)
+	{
+		print(n / 10);
+	}
+	printf("%d ", n % 10); 
+}
+int main()
+{
+	unsigned int num = 123;
+	print(num);
+	return 0;
+}
