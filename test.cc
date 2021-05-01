@@ -663,3 +663,25 @@ int main()
 	print(num);
 	return 0;
 }
+
+
+
+#include<stdio.h>
+#include<string.h>
+int my_strlen(char* str)//str指针变量
+{//计算字符串的长度(模拟实现strlen函数)
+	int count = 0;
+	while (*str != '\0')
+	{
+		count++;
+		str++;//地址+1向后走一步
+	}
+	return count;
+}
+int main()
+{
+	char arr[] = "biteee";
+	int len = my_strlen(arr);//arr是数组，数组传参，传过去的不是整个数组，而是第一个元素的地址
+	printf("%d\n", len);
+	return 0;
+}
