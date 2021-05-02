@@ -743,3 +743,30 @@ int main()
 	printf("%d\n", ret);
 	return 0;
 }
+
+
+
+int count = 0;
+int Fib(int n)
+{
+	//测试第三个斐波那契数的计算次数(当使用递归算法)
+	if (n == 3)
+	{
+		count++;
+	}
+	if (n <= 2)
+		return 1;
+	else
+		return Fib(n-2) + Fib(n-1);
+
+}
+int main()
+{
+	int n = 0;
+	int ret = 0;
+	scanf("%d", &n);
+	ret=Fib(n);
+	printf("%d\n", ret);
+	printf("%d\n", count);
+	return 0;
+}
