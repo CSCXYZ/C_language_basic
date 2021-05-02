@@ -770,3 +770,29 @@ int main()
 	printf("%d\n", count);
 	return 0;
 }
+
+
+
+int Fib(int n)//求第n个斐波那契数列通过循环，正解
+{
+	int a = 1;
+	int b = 1;
+	int c = 1;
+	while (n > 2)
+	{
+		c = a + b;
+		a = b;
+		b = c;
+		n--;
+	}
+	return c;
+}
+int main()
+{
+	int n = 0;
+	int ret = 0;
+	scanf("%d", &n);
+	ret=Fib(n);
+	printf("%d\n", ret);
+	return 0;
+}
