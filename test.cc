@@ -1311,3 +1311,21 @@ int main()
 	printf("a=%d b=%d\n", a,b);
 	return 0;
 }
+
+
+
+#include<stdio.h>//求一个整数存储在内存中的二进制中1的个数
+int main()
+{
+	int num = 0;
+	int count = 0;
+	scanf("%d", &num);
+	int i = 0;
+	for (i = 0; i < 32; i++)
+	{
+		if (((num >> i) & 1) == 1)
+			count++;
+	}
+	printf("%d\n", count);
+	return 0;
+}
