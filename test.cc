@@ -1329,3 +1329,19 @@ int main()
 	printf("%d\n", count);
 	return 0;
 }
+
+
+
+#include<stdio.h>
+int get_max(int x, int y)//三目操作符比较大小
+{
+	return x > y ? x : y;
+}
+int main()
+{
+	int a = 20;
+	int b = 20;
+	int max = get_max(a, b);
+	printf("max=%d\n", max);
+	return 0;
+}
