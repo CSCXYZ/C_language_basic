@@ -1345,3 +1345,28 @@ int main()
 	printf("max=%d\n", max);
 	return 0;
 }
+
+
+
+#include<stdio.h>
+struct Stu//创建一个结构体类型
+{
+	//成员变量
+	char name[20];
+	int age;
+	char id[20];
+};
+
+int main()
+{
+	int a = 10;
+	struct Stu s1 = { "张三",20, "20190909" };
+		//使用struct Stu这个类型创建了一个学生对象s1,并初始化
+	struct Stu* ps = &s1;
+	printf("%d\n", s1.age);
+	printf("%s\n", s1.name);
+	printf("%d\n", ps->age);
+	printf("%s\n", ps->name);
+		//结构体变量.成员名
+	return 0;
+}
