@@ -1408,3 +1408,48 @@ int main()//指针与数组
 	}
 	return 0;
 }
+
+
+
+
+void Reverse(int arr[], int sz)//函数完成数组元素的逆置
+{
+	int left = 0;
+	int right = sz - 1;
+	while (left < right)
+	{
+		int tmp = arr[left];
+		arr[left] = arr[right];
+		arr[right] = tmp;
+		left++;
+		right--;
+	}
+}
+void Init(int arr[], int sz)//函数完成数组初始化
+{
+	int i = 0;
+	for (i = 0; i < sz; i++)
+	{
+		arr[i] = 0;
+	}
+}
+void Print(int arr[], int sz)//函数完成数组的打印
+{
+	int i = 0;
+	for (i = 0; i < sz; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+	printf("\n");
+}
+int main()
+{
+	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+
+	Print(arr, sz);//打印数组
+	Reverse(arr,sz);
+	Print(arr, sz);
+
+	return 0;
+}
