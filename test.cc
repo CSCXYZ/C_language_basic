@@ -1394,3 +1394,17 @@ int main()
 	printf("%d\n", len);
 	return 0;
 }
+
+
+
+int main()//指针与数组
+{
+	int arr[10] = { 0 };
+	int* p = arr;
+	int i = 0;
+	for (i = 0; i < 10; i++)
+	{
+		printf("%p====%p\n", p + i, &arr[i]);
+	}
+	return 0;
+}
