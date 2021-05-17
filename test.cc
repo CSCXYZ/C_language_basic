@@ -1533,3 +1533,37 @@ int main()
 	system("pause");//system库函数执行系统命令暂停
 	return 0;
 }
+
+
+
+
+int count_bit_one(int n)//作为无符号数输入（以补码形式输入）
+{
+	int count = 0;
+	while (n)
+	{
+		n = n & (n - 1);
+		count++;
+	}
+	return count;
+}
+//13
+//1101 n
+//1100 n-1
+//1100 n
+//1011 n-1
+//1000 n
+//0111 n-1
+//0000 n
+int main()
+//统计二进制中1的个数
+//写一个函数返回参数二进制中1的个数
+//写一个函数求其二进制（补码）表示有几个1
+{
+	int a = 0;
+	scanf("%d", &a);
+	int count = count_bit_one(a);
+	printf("%d\n",count);
+	system("pause");//system库函数执行系统命令暂停
+	return 0;
+}
