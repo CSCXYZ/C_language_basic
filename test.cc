@@ -1502,3 +1502,34 @@ int main()
 	system("pause");//system库函数执行系统命令暂停
 	return 0;
 }
+
+
+
+int count_bit_one(int n)//作为无符号数输入（以补码形式输入）
+//11111111111111111111111
+//00000000000000000000001
+//00000000000000000000001 按位与
+{
+	int count = 0;
+	int i = 0;
+	for (i = 0; i < 32; i++)
+	{
+		if (((n >> i) & 1) == 1)
+		{
+			count++;
+		}
+	}
+	return count;
+}
+int main()
+//统计二进制中1的个数
+//写一个函数返回参数二进制中1的个数
+//写一个函数求其二进制（补码）表示有几个1
+{
+	int a = 0;
+	scanf("%d", &a);
+	int count = count_bit_one(a);
+	printf("%d\n",count);
+	system("pause");//system库函数执行系统命令暂停
+	return 0;
+}
