@@ -1472,3 +1472,33 @@ int main()//数组元素交换
 		arr2[i] = tmp;
 	}
 }
+
+
+
+#include<stdio.h>
+#include<stdlib.h>
+int count_bit_one(unsigned int n)//作为无符号数输入（以补码形式输入）
+{
+	int count = 0;
+	while (n)
+	{
+		if (n % 2 == 1)
+		{
+			count++;
+		}
+		n = n / 2;
+	}
+	return count;
+}
+int main()
+//统计二进制中1的个数
+//写一个函数返回参数二进制中1的个数
+//写一个函数求其二进制（补码）表示有几个1
+{
+	int a = 0;
+	scanf("%d", &a);
+	int count = count_bit_one(a);
+	printf("%d\n",count);
+	system("pause");//system库函数执行系统命令暂停
+	return 0;
+}
