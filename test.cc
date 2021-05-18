@@ -1567,3 +1567,33 @@ int main()
 	system("pause");//system库函数执行系统命令暂停
 	return 0;
 }
+
+
+
+
+#include<stdio.h>
+#include<stdlib.h>
+int get_diff_bit(int m, int n)
+//求二进制中不同位的个数
+//两个int（32位）整数m和n的二进制表达中，有多少个位bit不同？
+//先取按位异或，相同为0，不同为1;再计算含多少个1
+{
+	int tmp = m ^ n;
+	int count = 0;
+	while (tmp)
+	{
+		tmp = tmp & (tmp - 1);
+		count++;
+	}
+	return count;
+}
+int main()
+{
+	int m = 0;
+	int n = 0;
+	scanf("%d%d", &m, &n);
+	int count=get_diff_bit(m, n);
+	printf("count=%d\n", count);
+	system("pause");
+	return 0;
+}
