@@ -1719,3 +1719,27 @@ int main()
 	printf("%s\n", arr);
 	return 0;
 }
+
+
+
+//编写一个函数, 输入一个非负整数，返回组成它的数字之和
+//输入1729，输出1+7+9+2=19
+int DigitSum(unsigned int num)
+{
+	if (num > 9)
+	{
+		return DigitSum(num / 10) + num % 10;
+	}
+	else 
+	{
+		return num;
+	}
+}
+int main()
+{
+	unsigned int num = 0;
+	scanf("%d", &num);
+	int ret = DigitSum(num);
+	printf("ret=%d\n", ret);
+	return 0;
+}
