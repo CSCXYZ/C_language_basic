@@ -1819,3 +1819,29 @@ int main()
 	system("pause");
 	return 0;
 }
+
+
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<assert.h>
+void my_strcpy(char* dest, char* src)
+{
+	assert(dest != NULL);//断言
+	assert(src != NULL);//断言
+	while (*dest++=*src++)
+	{
+		;
+	}
+}
+int main()
+{
+//strcpy	
+//字符串拷贝
+	char arr1[] = "#################";
+	char arr2[] = "bit";
+	my_strcpy(arr1, NULL);
+	printf("%s\n", arr1);
+	system("pause");
+	return 0;
+}   
