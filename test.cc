@@ -1793,3 +1793,29 @@ int main()// 1！+2！+3！+...n!
 	system("pause");
 	return 0;
 }   
+
+
+
+#include<stdio.h>
+#include<stdlib.h>
+void my_strcpy(char* dest, char* src)
+{
+	while (*src != '\0')
+	{
+		*dest = *src;
+		src++;
+		dest++;
+	}
+	*dest = *src;//复制'\0'
+}
+int main()
+{
+//strcpy	
+//字符串拷贝(6分)
+	char arr1[] = "#################";
+	char arr2[] = "bit";
+	my_strcpy(arr1, arr2);
+	printf("%s\n", arr1);
+	system("pause");
+	return 0;
+}
