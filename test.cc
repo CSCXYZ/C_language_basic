@@ -1845,3 +1845,31 @@ int main()
 	system("pause");
 	return 0;
 }   
+
+
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<assert.h>
+char* my_strcpy(char* dest,const char* src)
+{
+	char* ret = dest;
+	assert(dest != NULL);//断言
+	assert(src != NULL);//断言
+	//把src指向的字符串拷贝到dest指向的空间，包含'\0'字符
+	while (*dest++=*src++)
+	{
+		;
+	}
+	return ret;
+}
+int main()
+{
+//strcpy	
+//字符串拷贝(10分)
+	char arr1[] = "#################";
+	char arr2[] = "bit";
+	printf("%s\n", my_strcpy(arr1, arr2));
+	system("pause");
+	return 0;
+}
