@@ -1873,3 +1873,27 @@ int main()
 	system("pause");
 	return 0;
 }
+
+
+
+
+#include<assert.h>
+int my_strlen(const char* str)
+	//计算字符串长度
+{
+	int count = 0;
+	assert(str != NULL);
+	while (*str != '\0')
+	{
+		count++;
+		str++;
+	}
+	return count;
+}
+int main()
+{
+	char arr[] = "abcdef";
+	int len = my_strlen(arr);
+	printf("%d\n", len);
+	return 0;
+}   
