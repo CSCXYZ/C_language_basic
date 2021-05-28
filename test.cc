@@ -1950,3 +1950,24 @@ int main()
 	char* pch[5];//存放字符指针的数组-指针数组
 	return 0;
 }
+
+
+
+int main()
+{
+	int arr1[] = { 1, 2, 3, 4, 5 };
+	int arr2[] = { 6, 7, 8, 9, 1 };
+	int arr3[] = { 1, 2, 3, 1, 1 };
+	int* parr[] = { arr1,arr2,arr3 };
+	int i = 0;
+	for (i = 0; i < 3; i++)
+	{
+		int j = 0;
+		for (j = 0; j < 5; j++)
+		{
+			printf("%d ", *(parr[i] + j));
+		}
+		printf("\n");
+	}
+	return 0;
+}
