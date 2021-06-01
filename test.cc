@@ -2032,3 +2032,17 @@ int main()
 	}
 	return 0;
 }
+
+
+
+//函数指针-指向函数的指针
+void Print(char* str)
+{
+	printf("%s\n", str);
+}
+int main()
+{
+	void(*p)(char*) = Print;
+	(*p)("hello bit");
+	return 0;
+}
