@@ -2114,3 +2114,15 @@ int main()
 		}
 	} while (input);
 }
+
+
+
+
+int main()
+{
+	int(*pf)(int, int);//函数指针
+	int(*pfArr[4])(int, int);
+	//pfArr是一个数组-函数指针的数组
+	int(*(*ppfArr)[4])(int, int) = &pfArr;
+	//ppfArr是一个指向 函数指针数组 的指针
+}
