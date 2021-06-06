@@ -2137,16 +2137,19 @@ int cmp_int(const void* e1, const void* e2)
 {
 	//比较两个整型值
 	return (*(int*)e1 - *(int*)e2);
+	//return((int)(*(float*)e1 - *(float*)e2)); 数组为浮点型时的强制类型转换
 }
 void test1()
 {
 	int arr[10] = { 9,8,7,6,5,4,3,2,1,0 };
+	//float f[]={9.0,8.0,7.0,6.0,5.0,4.0};
 	int sz = sizeof(arr) / sizeof(arr[0]);
 	qsort(arr, sz, sizeof(arr[0]), cmp_int);
 	int i = 0;
 	for (i = 0; i < sz; i++)
 	{
 		printf("%d ", arr[i]);
+		//printf("%f ",f[j]);
 	}
 }
 int main()
