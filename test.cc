@@ -2217,3 +2217,15 @@ int main()
 	return 0;
 }
 //ptr1[-1]=*(ptr-1) P142
+
+
+
+
+int main()
+{
+	int a[3][2] = { (0,1),(2,3),(4,5) };
+	int* p;
+	p = a[0];
+	printf("%d", p[0]);//p[0]=*(p+0)
+	return 0;
+}
