@@ -2205,3 +2205,15 @@ int main()
 	printf("\n");
 	return 0;
 }
+
+
+
+int main()
+{
+	int a[4] = { 1,2,3,4 };
+	int* ptr1 = (int*)(&a + 1);
+	int* ptr2 = (int*)((int)a + 1);
+	printf("%x,%x", ptr1[-1], *ptr2);
+	return 0;
+}
+//ptr1[-1]=*(ptr-1) P142
