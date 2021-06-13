@@ -2246,3 +2246,36 @@ int main()
 	printf("%s\n", cpp[-1][-1] + 1);
 	return 0;
 }//P145
+
+
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<string.h>
+#include<assert.h>
+void reverse(char* str)
+{
+	assert(str);
+	int len = strlen(str);
+	char* left = str;
+	char* right = str + len - 1;
+	while (left < right)
+	{
+		char tmp = *left;
+		*left = *right;
+		*right = tmp;
+		left++;
+		right--;
+	}
+}
+int main()
+{
+	char arr[256] = { 0 };
+	gets(arr);//abcdef--->fedcba
+	//逆序函数:
+	//输入一个字符串，可以有空格；输出逆序的字符串
+	reverse(arr);
+	printf("%s\n", arr);
+	return 0;
+}
