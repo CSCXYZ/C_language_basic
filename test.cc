@@ -2472,3 +2472,18 @@ int main()
 	print(arr, sz);
 	return 0;
 }
+
+
+
+#include<stdio.h>
+int main()
+{
+	unsigned char a = 200;
+	unsigned char b = 100;
+	unsigned char c = 0;
+	c = a + b;//整形提升
+	printf("%d %d ", a + b + c);
+	//300 44 p151
+	return 0;
+}
+  
