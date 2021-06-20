@@ -2623,3 +2623,36 @@ int main()
 return 0;
 } 
   
+
+
+
+#include<stdio.h>
+#include<assert.h>
+//实现一个函数，可以左旋字符串中的K个字符
+//ABCD左旋一个字符得到BCDA
+//ABCD左旋两个字符得到CDAB
+//旋转字符串
+void left_move(char* arr, int k)
+{
+	assert(arr != NULL);
+	int i = 0;
+	int len = strlen(arr);
+	for (i = 0; i < k; i++)
+	{
+		char tmp = *arr;
+		int j = 0;
+		for (j = 0; j < len - 1; j++)
+		{
+			*(arr + j) = *(arr + j + 1);
+		}
+		*(arr + len - 1) = tmp;
+	}
+}
+int main() 
+{
+	char arr[] = "abcdef";
+	left_move(arr, 2);
+	printf("%s\n", arr);
+return 0;
+} 
+  
