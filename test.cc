@@ -2874,3 +2874,32 @@ int main()
 return 0;
 } 
   
+
+
+
+#include<stdio.h>
+#include<assert.h>
+#include<string.h>
+//用自己的函数实现strcpy P163
+my_strcpy(char* dest, char* src)
+{
+	assert(dest != NULL);
+	assert(src != NULL);
+	char* ret = dest;
+	//拷贝src指向的字符串到dest指向的空间包含\0
+	while (*dest++ = *src++)
+	{
+		;
+	}
+	//返回目的空间的起始地址
+	return ret;
+}
+int main() 
+{
+	char arr1[] = "abcdefghi";
+	char arr2[] = "bit";
+	my_strcpy(arr1, arr2);
+	printf("%s\n", arr1);
+return 0;
+} 
+  
