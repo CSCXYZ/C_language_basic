@@ -2942,7 +2942,7 @@ return 0;
 #include<stdio.h>
 #include<assert.h>
 #include<string.h>
-//重写库函数strcmp
+//重写库函数strcmp P164
 my_strcmp(const char* str1, const char* str2)
 {
 	assert(str1 && str2);
